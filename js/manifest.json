@@ -4,21 +4,22 @@
     "start_url": "/?home=true",
     "lang": "en-US",
     "theme_color": "#fff",
-    "display": "fullscreen",
+    "display": "standalone",
     "icons": [
         {
-            "purpose": "monochrome",
+            "purpose": "maskable",
             "sizes": "192x192",
             "src": "../icons/maskable_icon_x192.png",
             "type": "image/png"
         },
         {
-            "purpose": "monochrome",
+            "purpose": "maskable",
             "sizes": "512x512",
             "src": "../icons/maskable_icon_x512.png",
             "type": "image/png"
         },
         {
+            "purpose": "maskable",
             "src": "../icons/logo.svg",
             "sizes": "800x800"
         }
