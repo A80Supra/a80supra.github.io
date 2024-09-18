@@ -88,9 +88,9 @@ function darkTheme() {
 	const but2 = document.getElementById('locationName');
 	but2.classList.toggle('darkthm');
 	const git = document.querySelector('.git');
-	git.classList.toggle('darkthm');
-	const windd = document.querySelector('.windd');
-	windd.classList.toggle('darkthm');
+	git.classList.toggle('darkimg');
+	const windd = document.querySelector('.windIcon');
+	windd.classList.toggle('darkimg');
 	if (themeColor.content === '#fff') {
 		themeColor.content = '#2E3643';
 	} else {
