@@ -23,5 +23,11 @@
             "src": "../icons/logo.svg",
             "sizes": "800x800"
         }
+    ],
+    "screenshots": [
+        {
+            "sizes": "512x512",
+            "src": "../icons/maskable_icon_x512.png"
+        }
     ]
-}
+    }
