@@ -1,5 +1,7 @@
 const apiKey = 'e77fbd1f803c4a6da49173124241707';
 
+const themeColor = document.querySelector('meta[name="theme-color"]');
+
 function getLocation() {
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(getPosition);
@@ -89,6 +91,11 @@ function darkTheme() {
 	git.classList.toggle('darkthm');
 	const windd = document.querySelector('.windd');
 	windd.classList.toggle('darkthm');
+	if (themeColor.content === '#fff') {
+		themeColor.content = '#2E3643';
+	} else {
+		themeColor.content = '#fff'
+	}
 }
 
 document.getElementById('themeToggle').onclick = function () {
@@ -100,6 +107,5 @@ let hour = dateTime.getHours();
 
 if (hour < 6) {
 	darkTheme();
+	themeColor.content = '#2E3643';
 }
-//pwa
-
