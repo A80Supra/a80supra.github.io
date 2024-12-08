@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <title>TheFreo Beta</title>
 </head>
 
@@ -20,7 +21,7 @@
             <header class="header">
                 <div class="header__inner">
                     <a class="homebtn" href="#main">
-                        <img src="images/icons/logo.png" alt="" style="width: 48px;">
+                        <img src="images/icons/logoHead.svg" alt="" style="width: 48px;">
                     </a>
                     <ul class="header__link-list">
                         <li class="header__link-item"><a href="https://github.com/TheFreo/">
@@ -34,7 +35,7 @@
                             </a></li>
                     </ul>
                     <button style="color: #ffffff; background-color: #ffffff00; font-size: 16px;" class="translate"
-                        id="langBtn">EN</button>
+                        onclick="translateClick(this)" id="en">EN</button>
                 </div>
             </header>
             <main class="main">
@@ -43,22 +44,16 @@
                         <div class="main__page-inner">
                             <ul class="main__menu-list">
                                 <li class="main__menu-item">
-                                    <a class="main__menu-btn" href="#about">About me</a>
+                                    <a class="main__menu-btn lang" key="about" href="#about">About me</a>
                                 </li>
                                 <li class="main__menu-item">
-                                    <a class="main__menu-btn" href="#skills">Skills</a>
-                                </li>
-                                <li class="main__menu-item">
-                                    <a class="main__menu-btn" href="#devices">Devices</a>
-                                </li>
-                                <li class="main__menu-item">
-                                    <a class="main__menu-btn" href="#contacts">Contacts</a>
+                                    <a class="main__menu-btn lang" key="cont" href="#contacts">Contacts</a>
                                 </li>
                             </ul>
                             <div class="main__title">
                                 <img src="images/avatar.webp" alt="">
                                 <div class="title__inner">
-                                    <h1 class="lang" id="timehello">Good day!</h1>
+                                    <h1 class="lang" id="timehello"></h1>
                                     <h1 class="lang" key="welup" style="margin-top: 0;">I'm TheFreo,</h1>
                                     <p class="lang" key="welun">I'm an aspiring programmer. I like to sit at
                                         home and watch anime :-)
@@ -71,67 +66,113 @@
                 <section id="about">
                     <div class="container">
                         <div class="about__inner">
-                            <ul class="about__bio-list">
-                                <h1 class="lang" key="bio">Who Am I?
-                                </h1>
-                                <li class="about__bio-item lang" key="name">Name: Artem</li>
-                                <li class="about__bio-item"><span class="lang" key="brith">Brithday: 15.06.2005
-                                        (through</span> <span id="d" class="days lang"></span> <span class="lang"
-                                        key="brith2">days)</span></li>
-                                <li class="about__bio-item lang" key="country">Counrty: Russia (dream: Japan or Europe)
-                                </li>
-                                <li class="about__bio-item lang" key="city">City: Novosibirsk (Hometowm: Surgut)
-                                </li>
-                                <li class="about__bio-item lang" key="stud">Studying: SibSUTIS</li>
-                                <li class="about__bio-item lang" key="langu">Languages: Russia, English (30%),
-                                    Ukrainian (70%)</li>
-                                <li class="about__bio-item lang" key="listen">Listen: Rock (Any), IDM, Ambient</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-                <section id="skills">
-                </section>
-                <section id="devices">
-                    <div class="container">
-                        <h1 class="devices__title">Devices</h1>
-                        <div class="about__grid">
-                            <div class="about__mainpc">
-                                <h1 class="lang" key="pc">Main PC</h1>
-                                <ul class="pc_info-list">
-                                    <li class="pc_info-item lang"><span class="lang" key="os">OS:</span> Windows 10 Pro
-                                    </li>
-                                    <li class="pc_info-item lang"><span class="lang" key="cpu">CPU:</span> Amd Ryzen
-                                        5500</li>
-                                    <li class="pc_info-item lang"><span class="lang" key="gpu">GPU:</span> Nvidia
-                                        Geforce GTX 1660 Super</li>
-                                    <li class="pc_info-item lang"><span class="lang" key="ram">RAM:</span> 16 GB</li>
-                                </ul>
+                            <div class="about__title">
+                                <h1 class="lang" key="about">About me</h1>
                             </div>
-                            <div class="about__laptop">
-                                <h1 class="lang" key="lap">Laptop (MateBook D14)</h1>
-                                <ul class="pc_info-list">
-                                    <li class="pc_info-item lang"><span class="lang" key="os">OS:</span> macOS Big Sur
-                                        11.7
-                                    </li>
-                                    <li class="pc_info-item lang"><span class="lang" key="cpu">CPU:</span> Intel Core
-                                        i5-10210U</li>
-                                    <li class="pc_info-item lang"><span class="lang" key="gpu">GPU:</span> Intel UHD
-                                        Graphics 620</li>
-                                    <li class="pc_info-item lang"><span class="lang" key="ram">RAM:</span> 8 GB</li>
-                                </ul>
-                            </div>
-                            <div class="about__mac">
-                                <h1>Temporary laptop (MacBook Pro 13 2014)</h1>
-                                <ul class="pc_info-list">
-                                    <li class="pc_info-item lang"><span class="lang" key="os">OS:</span> macOS Big Sur
-                                        11.7</li>
-                                    <li class="pc_info-item lang"><span class="lang" key="cpu">CPU:</span> Intel Core
-                                        i5-4278Um</li>
-                                    <li class="pc_info-item lang"><span class="lang" key="gpu">GPU:</span> Intel Iris
-                                        Graphics</li>
-                                    <li class="pc_info-item lang"><span class="lang" key="ram">RAM:</span> 8 GB</li>
-                                </ul>
+                            <div class="about__grid">
+                                <section class="bio">
+                                    <h1 class="lang" key="bio">Who am I?</h1>
+                                    <div class="bio__inner">
+                                        <p class="lang" key="name">Name: Artem</p>
+                                        <span style="display: ruby;">
+                                            <p class="lang" key="brith">Brithday: 15.06.2005 (through</p> <span
+                                                id="brithDays"></span><span class="lang" key="brith2"> days)</span>
+                                        </span>
+                                        <p class="lang" key="country">Counrty: Russia (dream: Japan or Europe)</p>
+                                        <p class="lang" key="city">City: Novosibirsk (Hometowm: Surgut) </p>
+                                        <p class="lang" key="stud">Studying: SibSUTIS</p>
+                                        <p class="lang" key="langu">Languages: Russia, English (30%), Ukrainian (65%)
+                                        </p>
+                                        <p class="lang" key="listen">Listen: Rock (Any), IDM, Ambient</p>
+                                    </div>
+                                </section>
+                                <section class="skills">
+                                    <h1 class="lang" key="skills">Skills</h1>
+                                    <!-- <ul class="skills-list">
+                                        <li class="skills-item">
+                                            <div class="bar__title">
+                                                <p>HTML</p>
+                                                <p id="htmlProg"></p>
+                                            </div>
+                                            <div class="bar__main">
+                                                <div style="background-color: #FFA500;" id="htmlLine"></div>
+                                            </div>
+                                        </li>
+                                        <li class="skills-item">
+                                            <div class="bar__title">
+                                                <p>CSS</p>
+                                                <p id="cssProg"></p>
+                                            </div>
+                                            <div class="bar__main">
+                                                <div style="background-color: #214DFF;" id="cssLine"></div>
+                                            </div>
+                                        </li>
+                                        <li class="skills-item">
+                                            <div class="bar__title">
+                                                <p>JavaScript</p>
+                                                <p id="jsProg"></p>
+                                            </div>
+                                            <div class="bar__main">
+                                                <div style="background-color: #FFFF00;" id="jsLine"></div>
+                                            </div>
+                                        </li>
+                                        <li class="skills-item">
+                                            <div class="bar__title">
+                                                <p>C++</p>
+                                                <p id="cppProg"></p>
+                                            </div>
+                                            <div class="bar__main">
+                                                <div style="background-color: #044FFF;" id="cppLine"></div>
+                                            </div>
+                                        </li>
+                                    </ul> -->
+                                    <div class="skills_icons">
+                                        <div class="skills_icons-inner">
+                                        <i class="devicon-html5-plain"></i>
+                                        <i class="devicon-css3-plain"></i>
+                                        <i class="devicon-javascript-plain"></i>
+                                        <i class="devicon-react-original"></i>
+                                        <i class="devicon-git-plain"></i>
+                                        <i class="devicon-cplusplus-plain"></i>
+                                        <i class="devicon-linux-plain"></i>
+                                        <i class="devicon-vscode-plain"></i>
+                                    </div>
+                                    </div>
+                                </section>
+                                <section class="devices">
+                                    <h1 class="lang" key="devices">Devices</h1>
+                                    <ul class="devices-list">
+                                        <li class="devices-item">
+                                            <h2 class="lang" key="pc">Main PC</h2>
+                                            <p><span class="lang" key="os">OS:</span> Windows 10 Pro && Arch Linux</p>
+                                            <p><span class="lang" key="cpu">CPU:</span> Amd Ryzen 5500</p>
+                                            <p><span class="lang" key="gpu">GPU:</span> Nvidia Geforce GTX 1660 Super
+                                            </p>
+                                            <p><span class="lang" key="ram">RAM:</span> 16 GB</p>
+                                        </li>
+                                        <li class="devices-item">
+                                            <h2 class="lang" key="lap">Laptop (Matebook D14)</h2>
+                                            <p><span class="lang" key="os">OS:</span> macOS Monteray 12.4</p>
+                                            <p><span class="lang" key="cpu">CPU:</span> Intel Core i5-10210U</p>
+                                            <p><span class="lang" key="gpu">GPU:</span> Intel UHD Graphics 620</p>
+                                            <p><span class="lang" key="ram">RAM:</span> 8 GB</p>
+                                        </li>
+                                        <!-- <li class="devices-item">
+                                            <h2 class="lang" key="slap">Second laptop (Macbook Pro 13 2014)</h2>
+                                            <p><span class="lang" key="os">OS:</span> macOS Monteray 12.4</p>
+                                            <p><span class="lang" key="cpu">CPU:</span> Intel Core i5-4278Um</p>
+                                            <p><span class="lang" key="gpu">GPU:</span> Intel Iris Graphics</p>
+                                            <p><span class="lang" key="ram">RAM:</span> 8 GB</p>
+                                        </li> -->
+                                        <li class="devices-item">
+                                            <h2 class="lang" key="slap">Home server (Mac Mini 2011)</h2>
+                                            <p><span class="lang" key="os">OS:</span> Ubuntu 22.04</p>
+                                            <p><span class="lang" key="cpu">CPU:</span> Intel Core i5-2415m</p>
+                                            <p><span class="lang" key="gpu">GPU:</span> Intel HD Graphics 3000</p>
+                                            <p><span class="lang" key="ram">RAM:</span> 8 GB</p>
+                                        </li>
+                                    </ul>
+                                </section>
                             </div>
                         </div>
                     </div>
@@ -139,7 +180,6 @@
                 <section id="contacts">
                     <div class="container">
                         <div class="contacts__inner">
-                            <!-- <h1>Contacts</h1> -->
                             <div class="contacts__links">
                                 <a style="margin-bottom: 50px;" href="https://t.me/thefreo">TELEGRAM</a>
                                 <a href="mailto:thefreo@bk.ru">thefreo@bk.ru</a>
@@ -147,13 +187,14 @@
                         </div>
                     </div>
                 </section>
+                <section class="footer"><span class="lang" key="dev">©2024, Crafted by </span><a
+                        href="https:/github.com/TheFreo/about">TheFreo</a></section>
             </main>
-            <footer class="footer">
-            </footer>
         </div>
     </div>
 </body>
 
+<script src="js/lang.js"></script>
 <script src="js/main.js"></script>
 
 </html>
